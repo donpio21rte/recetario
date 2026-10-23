@@ -61,6 +61,30 @@ function HomePage() {
         <p className="subtitle">Dos opciones fáciles, sabrosas y perfectas para cocinar en casa.</p>
       </header>
 
+      <section className="video-section" aria-label="Video destacado">
+        <div className="video-player-card">
+          <div className="video-player-header">
+            <div className="video-player-dots" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <span className="video-player-label">Playlist destacada</span>
+          </div>
+
+          <iframe
+            width="1511"
+            height="561"
+            src="https://www.youtube.com/embed/ppshpGQUNu4"
+            title="Taca La Petaca - Chapulin Colorado"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       <section className="recipes-grid">
         {recipes.map((recipe) => (
           <Link to={`/receta/${recipe.id}`} key={recipe.id} className="recipe-card">
