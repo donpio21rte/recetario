@@ -21,7 +21,92 @@ html, body, #root {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  filter: blur(1.2px) brightness(0.95);
+  transform: scale(1.04);
+  animation: backgroundFade 18s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-layer--one {
+  background-image: url('https://media.tenor.com/9q-18a3QXhMAAAAd/cat-cat-gif.gif');
+}
+
+.background-layer--two {
+  background-image: url('https://media.tenor.com/4R0j9E2D-LsAAAAd/cat-cat-meme.gif');
+  animation-delay: 9s;
+}
+
+.background-floating-gif {
+  position: fixed;
+  inset: auto;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0.8) contrast(1.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.background-floating-gif--one {
+  top: 70px;
+  left: 7%;
+  background-image: url('https://c.tenor.com/63q3eXjdtcoAAAAC/tenor.gif');
+}
+
+.background-floating-gif--two {
+  top: 120px;
+  right: 9%;
+  background-image: url('https://media.tenor.com/Tkb3OeCS2dgAAAA1/mbappe-mbappe-dance.webp');
+  opacity: 0.15;
+}
+
+.background-floating-gif--three {
+  bottom: 90px;
+  left: 16%;
+  background-image: url('https://media.tenor.com/wi8DoCgEEekAAAA1/mbappe-dictator.webp');
+  opacity: 0.13;
+}
+
+.background-floating-gif--four {
+  bottom: 100px;
+  right: 14%;
+  background-image: url('https://media.tenor.com/zpySib-XNeUAAAA1/mbappe-dictator-meme-olise-france-french-world-cup-2026-usa-hyv-kylian.webp');
+  opacity: 0.1;
+}
+
+@keyframes backgroundFade {
+  0%, 18% {
+    opacity: 0;
+  }
+  25%, 50% {
+    opacity: 1;
+  }
+  60%, 100% {
+    opacity: 0;
+  }
 }
 
 img {
@@ -34,6 +119,8 @@ button, a {
 }
 
 .page {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
   padding: 48px 24px 72px;

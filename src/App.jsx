@@ -2,46 +2,52 @@ import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom'
 
 const recipes = [
   {
-    id: 'pasta-al-pesto',
-    title: 'Pasta al Pesto',
+    id: 'aguachile-verde-mazatlan',
+    title: 'Aguachile Verde de Mazatlán',
     image:
-      'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=900&q=80',
-    description: 'Un plato fresco, rápido y lleno de sabor.',
+      'https://elmomentochiapas.mx/wp-content/uploads/2025/08/Aguachile-de-Mazatlan-La-esencia-del-sabor-de-Sinaloa-3-1024x538.jpg',
+    description: 'Un platillo fresco, cítrico y con ese toque picante típico del puerto.',
     ingredients: [
-      '250 g de pasta',
-      '2 tazas de albahaca',
-      '2 dientes de ajo',
-      '1/4 taza de nueces',
-      '1/2 taza de queso parmesano',
-      'Aceite de oliva',
-      'Sal y pimienta',
+      '500 g de camarón fresco',
+      '2 jitomates verdes',
+      '1 taza de cilantro',
+      '1/2 taza de pepino',
+      '2 chiles serranos',
+      '1/2 taza de agua fría',
+      'Jugo de 2 limones',
+      '1 cucharadita de sal',
+      '1/4 de cebolla morada finamente picada',
+      'Rodajas de aguacate para acompañar',
     ],
     steps: [
-      'Cocina la pasta en agua con sal hasta que esté al dente.',
-      'Licua la albahaca, el ajo, las nueces, el queso y un chorrito de aceite hasta obtener un pesto suave.',
-      'Mezcla la pasta con el pesto y agrega un poco del agua de cocción si está muy espeso.',
-      'Sirve con más queso y un toque de pimienta negra.',
+      'Lava y corta el camarón en trozos pequeños o deja los filetes enteros si prefieres un estilo clásico.',
+      'Licua el cilantro, los chiles, el jugo de limón, el agua, la sal y el pepino hasta obtener una salsa verde muy fresca.',
+      'Mezcla la salsa con el camarón y deja reposar 5 a 10 minutos para que se marine suavemente.',
+      'Sirve con cebolla morada, aguacate y un toque más de limón. Puedes acompañarlo con tostadas o totopos.',
     ],
   },
   {
-    id: 'salmon-asado',
-    title: 'Salmón Asado',
+    id: 'torta-de-tamal',
+    title: 'Torta de Tamal',
     image:
-      'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80',
-    description: 'Una comida elegante, jugosa y fácil de preparar.',
+      'https://imgs.search.brave.com/OGSFeDAaDrPeagxTlgEMNgB02feq2zY3KI-LSvpHACA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWx1bml2ZXJzYWxw/dWVibGEuY29tLm14/L3Jlc2l6ZXIvdjIv/U1VUQlpEUk1ZWkZR/REQ3TFo1TUtFM1NL/VlEuanBnP2F1dGg9/MTQ4YTliYzdhMThk/OTZjNzZkYjVkYzJj/OWJmOTM0MmNiMWZm/Njg3ODAxMGM3YmMx/ZDY4OWM0NTBlZWMx/OWQ0MiZzbWFydD10/cnVlJmhlaWdodD02/NjY',
+    description: 'Un clásico sabroso, reconfortante y perfecto para cualquier momento.',
     ingredients: [
-      '2 filetes de salmón',
-      '1 cucharada de mantequilla',
-      '1 limón',
-      '2 cucharadas de perejil picado',
-      'Sal y pimienta',
-      '1 cucharadita de ajo en polvo',
+      '2 tamales ya cocidos',
+      '4 bolillos o pan de torta',
+      '1/2 taza de crema',
+      '1/2 taza de frijoles negros cocidos',
+      '1 taza de salsa verde o roja',
+      '1/2 cebolla morada finamente picada',
+      '1 aguacate en rodajas',
+      'Queso fresco al gusto',
+      'Cilantrillo fresco',
     ],
     steps: [
-      'Precalienta el horno a 200°C y coloca el salmón en una bandeja.',
-      'Sazona con sal, pimienta, ajo en polvo y un toque de limón.',
-      'Agrega la mantequilla sobre cada filete y hornea por 15 a 18 minutos.',
-      'Sirve con perejil y rodajas de limón frescas.',
+      'Calienta los tamales al vapor o en el microondas para que queden suaves.',
+      'Corta los bolillos y abre cada uno por la mitad sin separarlos del todo.',
+      'Coloca el tamal encima de la base, agrega frijoles, salsa, crema y queso.',
+      'Termina con aguacate, cebolla y cilantro; sirve de inmediato para disfrutarlo bien sabroso.',
     ],
   },
 ]
@@ -123,9 +129,18 @@ function RecipeDetail() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/receta/:id" element={<RecipeDetail />} />
-    </Routes>
+    <>
+      <div className="background-layer background-layer--one" aria-hidden="true" />
+      <div className="background-layer background-layer--two" aria-hidden="true" />
+      <div className="background-floating-gif background-floating-gif--one" aria-hidden="true" />
+      <div className="background-floating-gif background-floating-gif--two" aria-hidden="true" />
+      <div className="background-floating-gif background-floating-gif--three" aria-hidden="true" />
+      <div className="background-floating-gif background-floating-gif--four" aria-hidden="true" />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/receta/:id" element={<RecipeDetail />} />
+      </Routes>
+    </>
   )
 }
