@@ -41,7 +41,3 @@ La aplicación cuenta con:
 - Enlace para acceder al detalle de cada receta.
 - Vista individual con información del platillo.
 - Navegación entre rutas usando React Router.
-
-## Estado del proyecto
-
-Proyecto en desarrollo y listo para evaluación funcional mediante pruebas de interfaz y navegación.
