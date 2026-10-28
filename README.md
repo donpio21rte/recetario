@@ -1,39 +1,47 @@
-Esta misma noche yo me tengo que robar
-A la chaparrita que me supo conquistar
-Su papá no quiso darnos autorización
-Puso de pretexto que estoy sin colocación
+# Recetario
 
-Ándale y retaca taca taca la petaca taca taca
-Que se ataca taca taca tu papá
-Ándale y retaca taca taca la petaca
-Y apúrate zotaca taca taca taca ta
+Aplicación web para consultar recetas rápidas y fáciles de preparar. El sistema permite visualizar una selección de platillos destacados y acceder al detalle de cada una para revisar ingredientes y preparación.
 
-No traje escalera porque no la conseguí
-Pero pega el brinco pa' que yo te cache aquí
-Ay zotaca mía, qué manera de brincar
-De la coladera voy tenerte que sacar
+## Objetivo del proyecto
 
-Ándale y retaca taca taca la petaca taca taca
-Que se ataca taca taca tu papá
-Ándale y retaca taca taca la petaca
-Y apúrate zotaca taca taca taca ta
+El objetivo de Recetario es ofrecer una experiencia de navegación sencilla para que el usuario pueda:
+- Explorar recetas destacadas desde la pantalla principal.
+- Seleccionar una receta para ver su contenido completo.
+- Volver al inicio sin perder la estructura de la aplicación.
 
-No traje caballo porque no lo conseguí
-Pero caminando nos podemos ir de aquí
-Ay zotaca mía qué manera de andar
-Da ca la petaca pa' que puedas caminar
+## Historias de usuario
 
-Ándale y retaca taca taca la petaca taca taca
-Que se ataca taca taca tu papá
-Ándale y retaca taca taca la petaca
-Y apúrate zotaca taca taca taca ta
+1. HU-01: Como visitante, quiero ver una lista de recetas destacadas al ingresar a la aplicación, para elegir rápidamente cuál preparar.
+2. HU-02: Como visitante, quiero abrir el detalle de una receta, para conocer sus ingredientes y pasos de preparación.
+3. HU-03: Como visitante, quiero regresar a la pantalla principal desde una receta, para seguir navegando entre opciones.
 
-No tengo trabajo porque no sé trabajar
-Pero tú eres buena y me puedes ayudar
-Ay zotaca mía qué manera de comer
-Con tus papacitos yo te voy a devolver
+## Casos de prueba
 
-Ándale y retaca taca taca la petaca taca taca
-Que se ataca taca taca tu papá
-Ándale y retaca taca taca la petaca
-Y apúrate zotaca taca taca taca ta
+### CP-01: Visualización de recetas destacadas
+- Objetivo: Validar que la pantalla principal carga correctamente las recetas disponibles.
+- Entrada: Acceso a la ruta principal `/`.
+- Resultado esperado:
+  - Se muestra el título principal "Recetario".
+  - Se visualiza la sección de recetas destacadas.
+  - Aparecen al menos dos opciones de platillos con nombre e imagen.
+  - Cada tarjeta permite navegar a la receta correspondiente.
+
+### CP-02: Acceso al detalle de una receta y regreso al inicio
+- Objetivo: Validar que el usuario puede consultar la información detallada de una receta y volver al menú principal.
+- Entrada: Seleccionar una receta desde la pantalla inicial.
+- Resultado esperado:
+  - Se carga la vista de detalle con el nombre de la receta, descripción, ingredientes y pasos de preparación.
+  - Se muestra el botón de regreso.
+  - Al hacer clic en "Regresar" o "Volver al inicio", el usuario vuelve a la pantalla principal.
+
+## Descripción funcional
+
+La aplicación cuenta con:
+- Página de inicio con listado de recetas.
+- Enlace para acceder al detalle de cada receta.
+- Vista individual con información del platillo.
+- Navegación entre rutas usando React Router.
+
+## Estado del proyecto
+
+Proyecto en desarrollo y listo para evaluación funcional mediante pruebas de interfaz y navegación.
